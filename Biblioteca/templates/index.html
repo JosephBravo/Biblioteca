@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %} Document {% endblock %}</title>
+</head>
+<body>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header"	>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Biblioteca</a>
+        </div>
+        
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav active">
+                <li><a href="/admin/" target="_blank">Admin</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+
+
+
+
+{% block header %}
+<h4> Este es el bloque del header base</h4>
+{% endblock %}
+
+
+<h5> Este es el contenido del archivo base</h5>
+
+{% block content %}
+<center>
+<img src="{% static 'img/bookss.jpg' %}">
+<h5> Soy el contenido de página footer de base</h5>
+{% endblock %}
+
+</center>
+
+
+</body>
+</html>
