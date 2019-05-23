@@ -4,20 +4,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{% block title %} Biblioteca {% endblock %}</title>
+
+<title>{% block title %} Biblioteca {% endblock %}</title>
 </head>
 <body>
+{% block header %}
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
-  <body>
+  <body style="background-color:#A03805;">
     <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header"	>
-            <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">Biblioteca</a>
@@ -30,23 +31,28 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
-
-
-
-
-
-{% block header %}
-<h4> Este es el bloque del header base</h4>
+<br>
+<br>
+<h2> Bienvenido a la Biblioteca</h2><br>
 {% endblock %}
 
-
-<h5> Este es el contenido del archivo base</h5>
-
-{% block content %}
 <center>
 <img src="{% static 'img/bookss.jpg' %}">
-<h5> Soy el contenido de página footer de base</h5>
+<h5> Escoge una opción: </h5>
+
+{% block content %}
+    
+    <center> <br>
+            <li><a style="background-color:#DEE8A5;" href="/nuevo" target="_blank">Agregar Libro</a></li>
+        </ul>
+    </div><br>
+
+<div class="Busqueda">
+<form class="navbar-search pull-center" method="POST" action="/buscar">{% csrf_token %}
+    <input type="text" class="search-query" name="buscalo" placeholder="Busca un libro">
+        <div class="btn-group">
+            <button class=" btn btn-primary" type="submit"><i class="icon-search"></i></button></div></form></div>
+
 {% endblock %}
 
 </center>

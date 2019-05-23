@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Probando página principal Biblioteca</title>
-</head>
-<body>
+{% extends 'templates/index.html' %}
 
-</body>
-</html>
+
+{% block header %}
+
+<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit"> Guardar</button>
+	
+
+{% endblock %}

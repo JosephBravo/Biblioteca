@@ -1,0 +1,13 @@
+{% block header %}
+
+<body style="background-color:#A03805;">
+
+<div>
+<form method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	
+	<button type="submit">Guardar</button></div>
+</body>
+
+{% endblock %}
