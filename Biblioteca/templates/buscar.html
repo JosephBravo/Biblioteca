@@ -1,4 +1,29 @@
-
 {% extends 'index.html' %}
+
+
+{% block header %}
+
+ <body style="background-color:#FABE86;">
+ 	</body>
+{% endblock %}
+
+{% block content %}
+	{% if autor %}
+		{% for autor in autores %}
+			{{autor.nombre}}
+		{% endfor %}
+
+	{% else %}
+			{% for dato in datos %}
+				{% for libro,autor in dato.items %}
+					<label>Datos del Libro:<br><br></label>
+					{{libro.titulo}}
+				{% for a in autor %}
+					</br></br><label>Autor:<br></label>{{a.nombre}}
+				{% endfor %}
+				{% endfor %}
+			{% endfor %}
+	{% endif %}
+{% endblock %}
 
 
