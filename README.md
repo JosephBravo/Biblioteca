@@ -1,5 +1,5 @@
 # Biblioteca
-Servicio web que permite administrar biblioteca y buscar libros de interés. Configurando API que permite buscar libros que no esten en la base de datos y agregarlos. pushpin
+Servicio web que permite administrar biblioteca, agregar y buscar libros de interés. Configurando API GoogleBooks que permite buscar libros que no esten en la base de datos y agregarlos.
 
 
 Requerimientos:
